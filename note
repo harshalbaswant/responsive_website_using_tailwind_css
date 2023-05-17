@@ -1,0 +1,27 @@
+step 1 - open vscode terminal
+' npm init -y ' 
+
+step 2 - installing tailwind css 
+
+npm install -D tailwindcss
+
+npx tailwindcss init  
+step 3 - create input.css file and add utilities file of tailwind 
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+step 4 - open package.json 
+
+add below content in script section replacing with test
+
+"build": "tailwindcss -i ./input.css -o ./css/main.css",
+    "watch": "tailwindcss -i ./input.css -o ./css/main.css --watch"
+
+ step 4 - once done run " npm run build  "
+
+   step 5 - create index.html add some code and run "npm run watch"   
+
+# to add custom colors  go to tailwind.config.js 
+ add in extend section

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digi-Bank Banking website by Harshal </title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="bg-color-primary text-color-white tracking-wider">
+    <header>
+        <nav class="container flex justify-between items-center ">
+            <div class=" py-5 text-color-secondary font-bold text-3xl ">
+                <a href="#home">
+                    <span class="text-color-white">Digi-</span>Bank
+                </a>
+            </div>
+            <div>
+                <ul class="hidden lg:flex items-center space-x-6">
+
+                    <li> <a class="hover:text-color-secondary ease-in duration-200 " href="#home">Home</a> </li>
+                    <li> <a class="hover:text-color-secondary ease-in duration-200 " href="#features">Features</a> </li>
+                    <li> <a class="hover:text-color-secondary ease-in duration-200 " href="#testimonial">Testimonial</a>
+                    </li>
+                    <li> <a class="hover:text-color-secondary ease-in duration-200 " href="#pricing">Pricing</a> </li>
+                    <li> <a class="hover:text-color-secondary ease-in duration-200 " href="#blog">Blog</a> </li>
+                    <li> <a class="hover:text-color-secondary ease-in duration-200 " href="#contact">Contact</a> </li>
+                    <li><button
+                            class="bg-color-secondary px-9 py-3 rounded-md capitalize font-bold hover:opacity-80 ease-in duration-200">Free
+                            trial</button></li>
+                </ul>
+            </div>
+            <!-- mobile screen -->
+            <div id="hamburger" class=" lg:hidden cursor-pointer z-50">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+            <div id="menu" class="hidden bg-color-primary-dark h-[100vh] absolute inset-0">
+                <ul class="h-full grid place-items-center p-20">
+                    <li> <a id="hLink" class="hover:text-color-secondary ease-in duration-200 " href="#home">Home</a>
+                    </li>
+                    <li> <a id="hLink" class="hover:text-color-secondary ease-in duration-200 "
+                            href="#features">Features</a> </li>
+                    <li> <a id="hLink" class="hover:text-color-secondary ease-in duration-200 "
+                            href="#testimonial">Testimonial</a>
+                    </li>
+                    <li> <a id="hLink" class="hover:text-color-secondary ease-in duration-200 "
+                            href="#pricing">Pricing</a> </li>
+                    <li> <a id="hLink" class="hover:text-color-secondary ease-in duration-200 " href="#blog">Blog</a>
+                    </li>
+                    <li> <a id="hLink" class="hover:text-color-secondary ease-in duration-200 "
+                            href="#contact">Contact</a> </li>
+                    <li><button
+                            class="bg-color-secondary px-9 py-3 rounded-md capitalize font-bold hover:opacity-80 ease-in duration-200">Free
+                            trial</button></li>
+                </ul>
+            </div>
+
+        </nav>
+    </header>
+
+
+    <main class="">
+        <section id="home">
+            <div class="container py-20">
+                <div class="flex flex-col items-center z-20 md:flex-row">
+                    <div class="text-center mb-12 md:text-left md:w-1/2 md:pr-10">
+                        <h1 class="text-3xl md:text-4xl font-bold leading-snug ">Awesome App for your Financial.</h1>
+                        <p class="leading-relaxed mb-10">This should be used to tell a story and let your users know a little more about app and it’s
+                            use, How can benefit them.</p>
+                        <button
+                            class="bg-color-secondary px-9 py-3 rounded-md capitalize font-bold hover:opacity-80 ease-in duration-200">Download App</button>
+                    </div>
+                    <div class="md:w-1/2">
+                        <img src="./images/hero4.png" alt="">
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+
+
+
+
+    <script>
+        // mobile menu
+        const hamburger = document.querySelector('#hamburger');
+        const menu = document.querySelector('#menu');
+        const hLink = document.querySelector('#hLink');
+        const faSolid = document.querySelector('.fa-solid');
+
+        hamburger.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+            faSolid.classList.toggle('fa-xmark')
+        })
+
+        hLink.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+                faSolid.classList.toggle('fa-xmark')
+            })
+        })
+
+    </script>
+</body>
+
+</html>
